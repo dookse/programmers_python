@@ -3,10 +3,8 @@
 
 
 def solution(n):
-    answer = '수박' * (n // 2)
-    if n % 2 is not 0:
-        answer += '수'
-    return answer
+    answer = '수박' * (n // 2 + 2)
+    return answer[:n]
 
 
 print(solution(3))
