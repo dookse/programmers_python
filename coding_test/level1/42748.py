@@ -5,8 +5,9 @@
 def solution(array, commands):
     answer = []
     for command in commands:
-        cut_arr = sorted(array[command[0] - 1:command[1]])
-        answer.append(cut_arr[command[2] - 1])
+        start, end, i = command
+        start, i = start - 1, i - 1
+        answer.append(sorted(array[start:end])[i])
     return answer
 
 
